@@ -12,4 +12,8 @@ class TestOwner < Minitest::Test
     assert_equal(@owner1.name,"Brian")
   end
 
+  def test_experience
+    assert_equal(@owner1.experience,"10 years. Dogs, cats, exotics - terrapin.")
+  end
+
 end
