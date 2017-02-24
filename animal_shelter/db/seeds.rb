@@ -6,6 +6,10 @@ require_relative('../models/ownership.rb')
 
 #animals
 
+Animal.delete_all
+Owner.delete_all
+Ownership.delete_all
+
 @billytortoise = Animal.new({
   "name" => "Billy", 
   "adoptable" => "with experience", 
@@ -20,7 +24,7 @@ require_relative('../models/ownership.rb')
   "type" => "exotic - ball python"})
 @sophiesnake.save
 
-@cecilparrot = Amimal.new({
+@cecilparrot = Animal.new({
   "name" => "Cecil", 
   "adoptable" => "no - owned by Keir", 
   "admission_date" => "05/05/2010", 

@@ -1,4 +1,4 @@
-require_relative('./animal.rb')
+require_relative('../db/sql_runner.rb')
 
 class Owner
   
@@ -17,7 +17,7 @@ class Owner
     '#{@experience}') RETURNING *;"
     result = SqlRunner.run(sql)
     resultobject = result.map { |owner| Owner.new(owner)}
-    idasstring = resultobject.id
+    idasstring = resultobject[0].id
     @id = idasstring.to_i
   end
 

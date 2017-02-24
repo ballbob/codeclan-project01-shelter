@@ -1,3 +1,5 @@
+require_relative('../db/sql_runner.rb')
+
 class Ownership
 
   attr_accessor :id, :animal_id, :owner_id
@@ -15,7 +17,7 @@ class Ownership
     '#{@owner_id}') RETURNING *"
     result = SqlRunner.run(sql)
     resultobject = result.map { |ownership| Ownership.new(ownership)}
-    idasstring = resultobject.id
+    idasstring = resultobject[0].id
     @id = idasstring.to_i
   end
 

@@ -1,3 +1,5 @@
+require_relative('../db/sql_runner.rb')
+
 class Animal
 
   attr_accessor :name, :adoptable, :id
@@ -12,7 +14,7 @@ class Animal
     @id = options['id'].to_i if options['id']
   end
 
-  def save()
+  def save
     sql = "INSERT INTO animals (name,adoptable,admission_date,type)
     VALUES
     (
@@ -24,7 +26,7 @@ class Animal
     RETURNING *;"
     result = SqlRunner.run(sql)
     resultobject = result.map { |animal| Animal.new(animal)}
-    idasstring = resultobject.id
+    idasstring = resultobject[0].id
     @id = idasstring.to_i
   end
 
