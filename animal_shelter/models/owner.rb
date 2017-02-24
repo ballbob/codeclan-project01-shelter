@@ -2,11 +2,11 @@ require_relative('./animal.rb')
 
 class Owner
   
-  attr_accessor :name, :animals, :id
+  attr_accessor :name, :id, :experience
   
   def intiialize(options)
     @name = options['name']
-    @animals = options['animals']
+    @experience = options['experience']
     @id = options['id'].to_i if options['id']
   end
 

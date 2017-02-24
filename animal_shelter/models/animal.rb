@@ -2,7 +2,7 @@ class Animal
 
   attr_accessor :name, :adoptable, :id
 
-  attr_reader :admission_date
+  attr_reader :admission_date, :type
 
   def initialize(options)
     @name = options['name']
