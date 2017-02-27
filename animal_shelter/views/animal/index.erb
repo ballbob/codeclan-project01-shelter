@@ -1,30 +1,62 @@
 <h2>Our animals</h2>
 
-<p>These are our pride and joy. We'll take in any injured, stray, sick or rescue animal that comes our way.</p>
+<p>These are our guests. We take in any injured, stray, sick or rescue animal that comes our way.</p>
 
 <p>To register a new animal with us, click <a href="/shelter/animal/new">here</a>.
 
-<table class="table">
+<table>
 
   <tr>
 
-    <th>Animal</th>
+    <th>
+    Animal
+    </th>
 
     <th></th>
 
-    <th>Type</th>
+    <th>
+    Type
+    </th>
 
     <th></th>
 
-    <th>Adoptable?</th>
+    <th>
+    Adoptable?
+    </th>
 
     <th></th>
 
-    <th>Admission date</th>
+    <th>
+    Admission date
+    </th>
 
   </tr>
 
+  <% for animal in @animals %>
+  
   <tr>
+
+    <td>
+      <%= animal.name %>
+    </td>
+
+    <td>-</td>
+
+    <td>
+      <%= animal.type %>
+    </td>
+
+    <td>-</td>
+
+    <td>
+      <%= animal.adoptable %>
+    </td>
+
+    <td>-</td>
+
+    <td>
+      <%= animal.admission_date %>
+    </td>
     
   </tr>
 

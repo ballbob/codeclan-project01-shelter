@@ -44,4 +44,10 @@ class Animal
     return resultobject
   end
 
+  def self.all
+    sql = "SELECT * FROM animals;"
+    result = SqlRunner.run(sql)
+    resultobject = result.map { |animal| Animal.new(animal)}
+  end
+
 end
