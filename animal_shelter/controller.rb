@@ -42,11 +42,15 @@ end
 
 get '/shelter/ownerships' do
   @ownerships = Ownership.all
+  @animals = Animal.all
+  @owners = Owner.all
   erb(:"ownerships/index")
 end
 
 get '/shelter/ownerships/new' do
   @ownerships = Ownership.all
+  @animals = Animal.all
+  @owners = Owner.all
   erb(:"ownerships/new")
 end
 
