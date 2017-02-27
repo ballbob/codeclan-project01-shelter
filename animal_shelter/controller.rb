@@ -1,11 +1,10 @@
-require('pry-byebug')
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('./models/animal.rb')
 require_relative('./models/owner.rb')
 require_relative('./models/ownership.rb')
 
-get '/shelter/index' do
+get '/shelter' do
   erb(:index)
 end
 
@@ -41,17 +40,17 @@ post '/shelter/owners' do
   redirect to ("/owners")
 end
 
-get 'shelter/ownerships' do
+get '/shelter/ownerships' do
   @ownerships = Ownership.all
-  erb(:"ownerships/index.erb")
+  erb(:"ownerships/index")
 end
 
-get 'shelter/ownerships/new' do
+get '/shelter/ownerships/new' do
   @ownerships = Ownership.all
-  erb(:"ownerships/new.erb")
+  erb(:"ownerships/new")
 end
 
-post 'shelter/ownerships' do
+post '/shelter/ownerships' do
   @ownership = Ownership.new(params)
   @ownership.save
   redirect to ("/ownerships")

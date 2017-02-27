@@ -13,20 +13,22 @@
   
   </tr>
 
-<%for ownership in @ownerships %>
+  <%for ownership in @ownerships %>
 
-  <tr>
+    <tr>
 
-    <td>
-      <%= ownership.owner_id %>
-    </td>
-  
-    <td>-</td>
-  
-    <td>
-      <%= ownership.animal_id %>
-    </td>
-  
-  </tr>
+      <td>
+        <%= ownership.owner_id %>
+      </td>
+    
+      <td>-</td>
+    
+      <td>
+        <%= ownership.animal_id %>
+      </td>
+    
+    </tr>
+
+  <% end %>
 
 </table>

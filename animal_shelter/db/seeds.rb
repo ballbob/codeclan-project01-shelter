@@ -66,6 +66,3 @@ Ownership.delete_all
   "owner_id" => "#{@ownerkeir.id}", 
   "animal_id" => "#{@cecilparrot.id}"})
 @keirownscecil.save
-
-binding.pry
-nil
