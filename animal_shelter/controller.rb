@@ -21,7 +21,7 @@ end
 post '/shelter/animals' do
   animal = Animal.new(params)
   animal.save
-  redirect to ("/animals")
+  redirect to ("/shelter/animals")
 end
 
 get '/shelter/owners' do
@@ -37,7 +37,7 @@ end
 post '/shelter/owners' do
   @owner = Owner.new(params)
   @owner.save
-  redirect to ("/owners")
+  redirect to ("/shelter/owners")
 end
 
 get '/shelter/ownerships' do
@@ -53,5 +53,5 @@ end
 post '/shelter/ownerships' do
   @ownership = Ownership.new(params)
   @ownership.save
-  redirect to ("/ownerships")
+  redirect to ("/shelter/ownerships")
 end
