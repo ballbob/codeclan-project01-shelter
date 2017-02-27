@@ -26,4 +26,10 @@ class Owner
     SqlRunner.run(sql)
   end
 
+  def self.all
+    sql = "SELECT * FROM owners;"
+    result = SqlRunner.run(sql)
+    resultobject = result.map { |owner| Owner.new(owner)}
+  end
+
 end

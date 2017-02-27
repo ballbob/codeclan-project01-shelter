@@ -36,7 +36,23 @@ get '/shelter/owners/new' do
 end
 
 post '/shelter/owners' do
-  owner = Owner.new(params)
-  owner.save
+  @owner = Owner.new(params)
+  @owner.save
   redirect to ("/owners")
+end
+
+get 'shelter/ownerships' do
+  @ownerships = Ownership.all
+  erb(:"ownerships/index.erb")
+end
+
+get 'shelter/ownerships/new' do
+  @ownerships = Ownership.all
+  erb(:"ownerships/new.erb")
+end
+
+post 'shelter/ownerships' do
+  @ownership = Ownership.new(params)
+  @ownership.save
+  redirect to ("/ownerships")
 end
