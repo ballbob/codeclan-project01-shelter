@@ -1,0 +1,25 @@
+body {
+  font-family: Trebuchet MS;
+  color:; green;
+  margin: 0px;
+  padding: 25px;
+}
+
+table, tr, th, td {
+  border: 1px solid black;
+}
+
+nav {
+  display: flexbox;
+  flex-direction: row;
+}
+
+form, input {
+  border: 1px solid black;
+}
+
+.flex {
+  display: flexbox;
+  justify-content: center;
+  border: 1px solid black;
+}
