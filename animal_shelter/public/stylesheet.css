@@ -1,17 +1,19 @@
+html {
+  background: white url('/ballpython.jpg');
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 30%;
+}
+
 body {
   font-family: Trebuchet MS;
-  color:; green;
+  color: black;
   margin: 0px;
   padding: 25px;
 }
 
 table, tr, th, td {
   border: 1px solid black;
-}
-
-nav {
-  display: flexbox;
-  flex-direction: row;
 }
 
 form, input {

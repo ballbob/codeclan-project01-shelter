@@ -30,6 +30,11 @@ class Animal
     @id = idasstring.to_i
   end
 
+  def delete
+    sql = "DELETE FROM animals WHERE id= #{@id};"
+    SqlRunner.run(sql)
+  end
+
   def self.delete_all
     sql = "DELETE FROM animals;"
     SqlRunner.run(sql)
