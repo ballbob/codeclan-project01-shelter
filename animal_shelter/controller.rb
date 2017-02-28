@@ -9,6 +9,8 @@ get '/shelter' do
   erb(:index)
 end
 
+
+
 # animals
 get '/shelter/animals' do
   @animals = Animal.all
@@ -37,6 +39,9 @@ post '/shelter/animals/delete' do
   redirect to ("/shelter/animals")
 end
 
+
+
+
 # owners
 get '/shelter/owners' do
   @owners = Owner.all
@@ -64,6 +69,9 @@ post '/shelter/owners/delete' do
   @owner.delete
   redirect to ("/shelter/owners")
 end
+
+
+
 
 
 # adoptions

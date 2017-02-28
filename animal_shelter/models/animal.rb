@@ -55,4 +55,16 @@ class Animal
     resultobject = result.map { |animal| Animal.new(animal)}
   end
 
+  def update
+    sql = "UPDATE animals SET
+    
+    name = '#{@name}',
+    adoptable = '#{@adoptable}',
+    admission_date = '#{@admission_date}',
+    type = '#{@type}'
+    
+    WHERE id = #{@id};",
+    SqlRunner.run(sql)
+  end
+
 end
