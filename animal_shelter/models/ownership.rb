@@ -32,4 +32,9 @@ class Ownership
     resultobject = result.map {|ownership| Ownership.new(ownership)}
   end
 
+  def delete
+    sql = "DELETE FROM ownerships WHERE id = #{@id}"
+    SqlRunner.run(sql)
+  end
+
 end
