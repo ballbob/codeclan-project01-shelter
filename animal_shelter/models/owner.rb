@@ -37,4 +37,12 @@ class Owner
     SqlRunner.run(sql)
   end
 
+  def update
+    sql = "UPDATE owners SET
+    name = '#{@name}',
+    experience = '#{@experience}'
+    WHERE id = '#{@id}'"
+    SqlRunner.run(sql)
+  end
+
 end

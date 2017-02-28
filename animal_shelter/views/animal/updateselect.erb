@@ -4,7 +4,7 @@
 
 <p>This page is for updating our animal records. Choose an animal from the drop-down menu and you'll be taken to their edit page.</p>
 
-<form method="post" action = "/shelter/animals/update">
+<form method="get" action = "/shelter/animals/updateselect">
 
   <select name="id">
 
@@ -14,7 +14,7 @@
 
         <option value="<%= animal.id %>">
 
-            <%= animal.name %>
+            <%= animal.name %> the <%= animal.type %>
 
         </option>
 

@@ -49,6 +49,12 @@ class Animal
     return resultobject
   end
 
+  def display
+    sql = "SELECT * FROM animals WHERE id=#{@id}"
+    result = SqlRunner.run(sql)
+    resultobject = result.map { |animal| Animal.new(animal)}
+  end
+
   def self.all
     sql = "SELECT * FROM animals;"
     result = SqlRunner.run(sql)
@@ -63,7 +69,7 @@ class Animal
     admission_date = '#{@admission_date}',
     type = '#{@type}'
     
-    WHERE id = #{@id};",
+    WHERE id = '#{@id}';",
     SqlRunner.run(sql)
   end
 

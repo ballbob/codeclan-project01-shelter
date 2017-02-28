@@ -1,0 +1,15 @@
+<h2>Update owner details</h2>
+
+<p>This page is used to update the details of owners, for instance previously unknown experience or a change of name.</p>
+
+<form method="post" action="/shelter/owners/<%= owner.id %>">
+
+  <label for="name">Name:</label>
+    <input value="<%= owner.name %>" type="text" id="name" name="name"/>
+
+  <label for="experience">Experience:</label>
+    <input value="<%= owner.experience %>" type="text" id="experience" name="experience"/>
+
+  <input type="submit" value="Update owner details.">
+
+</form>

@@ -36,15 +36,40 @@ end
 post '/shelter/animals/delete' do
   animal = Animal.new(params)
   animal.delete
-  redirect to ("/shelter/animals")
+  redirect to ('/shelter/animals')
 end
 
-get '/shelter/animals/update' do
-  @animals = Animal.new
+ get '/shelter/animals/updateselect' do
+   @animals = Animal.all
+   erb(:"animal/updateselect")
+ end
+
+get '/shelter/animals/:id/update' do
+  @animal = Animal.display(params[:id])
   erb(:"animal/update")
 end
 
 
+# post '/shelter/animals/updateselect' do
+#   @animal = Animal.new(params)
+#   @id = @animal.id
+#   redirect to ('/shelter/animals/#{@id}/update')
+# end
+
+# get '/shelter/animals/:id/update' do
+#   erb(:"animal/update")
+# end
+
+# get '/shelter/animals/:updateselect?id=' do
+#   @animal = Animal.new(params)
+#   erb(:"animal/update")
+# end
+
+# post '/shelter/animals/:id/update' do
+#   animal = Animal.new(params)
+#   animal.save
+#   redirect to ('/shelter/animals')
+# end
 
 # owners
 get '/shelter/owners' do
