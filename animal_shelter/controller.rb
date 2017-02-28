@@ -87,3 +87,13 @@ post '/shelter/ownerships' do
   redirect to ("/shelter/ownerships")
 end
 
+get '/shelter/ownerships/delete' do
+  @ownerships = Ownership.all
+  erb(:"ownerships/destroy")
+end
+
+post '/shelter/ownerships/delete' do
+  @ownership = Ownership.new(params)
+  @ownership.delete()
+  redirect to ("/shelter/ownerships")
+end

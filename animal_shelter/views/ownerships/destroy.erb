@@ -4,7 +4,7 @@
 
 <p>The process is simple: just select the combination from the drop-down menu, and it will be removed from our database.</p>
 
-<form method="post" action="/shelter/adoptions/delete">
+<form method="post" action="/shelter/ownerships/delete">
 
   <select name="id">
 
@@ -12,9 +12,9 @@
 
       <% for ownership in @ownerships %>
 
-        <option value="<%=ownerships.id%>">
+        <option value="<%= ownership.id %>">
 
-          <%= ownership.name %>
+          <%= ownership.id %>
 
         </option>
 
