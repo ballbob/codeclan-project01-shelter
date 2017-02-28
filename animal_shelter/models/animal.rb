@@ -2,9 +2,9 @@ require_relative('../db/sql_runner.rb')
 
 class Animal
 
-  attr_accessor :name, :adoptable, :id, :bio
+  attr_accessor :name, :adoptable, :id, :bio, :type
 
-  attr_reader :admission_date, :type
+  attr_reader :admission_date
 
   def initialize(options)
     @name = options['name']
@@ -16,13 +16,14 @@ class Animal
   end
 
   def save
-    sql = "INSERT INTO animals (name,adoptable,admission_date,type)
+    sql = "INSERT INTO animals (name,adoptable,admission_date,type,bio)
     VALUES
     (
     '#{@name}',
     '#{@adoptable}',
     '#{@admission_date}',
-    '#{@type}'
+    '#{@type}',
+    '#{@bio}'
     ) 
     RETURNING *;"
     result = SqlRunner.run(sql)
@@ -68,7 +69,8 @@ class Animal
     name = '#{@name}',
     adoptable = '#{@adoptable}',
     admission_date = '#{@admission_date}',
-    type = '#{@type}'
+    type = '#{@type}',
+    bio = '#{@bio}'
     WHERE id = '#{@id}';",
     SqlRunner.run(sql)
   end

@@ -10,7 +10,6 @@ get '/shelter' do
 end
 
 
-
 # animals
 get '/shelter/animals' do
   @animals = Animal.all
@@ -49,6 +48,10 @@ get '/shelter/animals/:id/update' do
   erb(:"animal/update")
 end
 
+get '/shelter/animals/:id/profile' do
+  @animal = Animal.display(params[:id])
+  erb(:"animal/profile")
+end
 
 # post '/shelter/animals/updateselect' do
 #   @animal = Animal.new(params)
@@ -70,6 +73,7 @@ end
 #   animal.save
 #   redirect to ('/shelter/animals')
 # end
+
 
 # owners
 get '/shelter/owners' do

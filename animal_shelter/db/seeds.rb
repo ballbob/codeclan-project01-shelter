@@ -47,7 +47,7 @@ Ownership.delete_all
   "adoptable" => "No - rehab after unsuitable diet",
   "admission_date" => "05/05/2016",
   "type" => "exotic - Corn snake",
-  "bio" => "We named Billy-Bob Billy-Bob because he was literally cornfed. His previous owners left a six year-old child to care for him without supervision, and the child fed him corn on the cob, misled by the name. Billy-Bob was badly poisoned, as snakes can only eat meat. We are still waiting to find out from the vets if Billy-Bob will survive."
+  "bio" => "We named Billy-Bob here Billy-Bob because he was literally corn-fed. His previous owners left a six year-old child to care for him without supervision, and the child fed him corn on the cob, misled by the name. Billy-Bob was badly poisoned, as snakes can only eat meat. We are still waiting to find out from the vets if Billy-Bob will survive."
   })
 
 #owners
