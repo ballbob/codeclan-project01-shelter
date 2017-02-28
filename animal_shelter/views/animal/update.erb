@@ -1,0 +1,21 @@
+<h2>Update animal details</h2>
+
+<p>Besides health changes, our animals often turn out to be a different sex, species, sub-species or breed than we initially thought.</p>
+
+<p>This page is for updating our animal records. Edit the information in the menu, then click 'update'.</p>
+
+<p>You cannot edit the initial admission date here.</p>
+
+<form method="post" action="/shelter/animals/<%=@animal.id %>/update">
+
+  <label for="name">Name:</label>
+    <input value="<%= @animal.name %>" type="text" id="name" name="name"/>
+
+  <label for="type">Type:</label>
+    <input value="<%= @animal.type %>" type="text" id="type" name="type"/>
+
+
+  <label for="adoptable">Adoptability:</label>
+    <input value="<%= @animal.adoptable %>" type="text" id="adoptable" name="adoptable"/>
+
+</form>

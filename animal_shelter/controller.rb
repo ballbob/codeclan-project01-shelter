@@ -39,6 +39,10 @@ post '/shelter/animals/delete' do
   redirect to ("/shelter/animals")
 end
 
+get '/shelter/animals/update' do
+  @animals = Animal.new
+  erb(:"animal/update")
+end
 
 
 

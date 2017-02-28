@@ -1,0 +1,33 @@
+<h2>Update animal details</h2>
+
+<p>Besides health changes, our animals often turn out to be a different sex, species, sub-species or breed than we initially thought.</p>
+
+<p>This page is for updating our animal records. Choose an animal from the drop-down menu and you'll be taken to their edit page.</p>
+
+<form method="post" action = "/shelter/animals/update">
+
+  <select name="id">
+
+    <label>
+
+      <% for animal in @animals %>
+
+        <option value="<%= animal.id %>">
+
+            <%= animal.name %>
+
+        </option>
+
+      <% end %>
+
+    </label>
+
+  </select>
+
+  <p>
+
+    <input type="submit" value="Go to update animal details"/>
+
+  </p>
+
+</form>
