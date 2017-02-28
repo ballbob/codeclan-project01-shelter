@@ -23,7 +23,7 @@ Ownership.delete_all
   "adoptable" => "no - recent surgery", 
   "admission_date" => "09/02/2015", 
   "type" => "exotic - ball python",
-  "bio" => "Sophie came to us with quite a few stories. Her last owner had tried to feed her live mice and rats, some bigger than her - this isn't advisable with a small, captive snake, as they don't have the killer instinct a cat or dog does and will just be injured, as Sophie has been. Since then, she's been recovering apace, and enjoying her (dead) food. Recently, Sophie had to have minor surgery after complications from previous injuries, but she's expected to make a full recovery."})
+  "bio" => "Sophie has had a hard life, and has the scars to prove it. Her last owner had tried to feed her live mice and rats, some bigger than her. Recently, she had minor surgery after issues from previous injuries."})
 @sophiesnake.save
 
 @cecilparrot = Animal.new({
@@ -31,7 +31,7 @@ Ownership.delete_all
   "adoptable" => "no - owned by Keir", 
   "admission_date" => "05/05/2010", 
   "type" => "exotic - African grey parrot",
-  "bio" => "Cecil is an African grey parrot, one of the longest-lived and smartest birds there are. We know he's very smart, because he was found outside a library. He's fluent in the profanities of twelve languages, a skill which he often uses to try to get a rise out of nearby humans. Since 2012, Cecil has been owned by a friend of the shelter, Keir."})
+  "bio" => "Cecil is an African grey parrot, one of the longest-lived and smartest birds there are. He is fluent in many rude words and phrases, which he uses expertly. Since 2012, Cecil has been owned by a friend of the shelter, Keir."})
 @cecilparrot.save
 
 @brothersnake = Animal.new({
@@ -39,7 +39,7 @@ Ownership.delete_all
   "adoptable" => "yes - good temperament. Escapes often. advise owner", 
   "admission_date" => "04/08/2016", 
   "type" => "exotic - Russian rat snake",
-  "bio" => "While Russian rat snakes are allegedly very good for beginners, they are also quite good at escape artistry. Brother's last owner punched him in the face when he suddenly popped up beside them on the sofa, but he took no lasting injuries from it. Brother is friendly and ready for a good home."})
+  "bio" => "Brother is quite the escape artist. His last owner punched him in the face when he suddenly popped up beside them on the sofa. Brother is friendly and ready for a good home."})
 @brothersnake.save
 
 @billybobsnake = Animal.new({
@@ -47,7 +47,7 @@ Ownership.delete_all
   "adoptable" => "No - rehab after unsuitable diet",
   "admission_date" => "05/05/2016",
   "type" => "exotic - Corn snake",
-  "bio" => "We named Billy-Bob here Billy-Bob because he was literally corn-fed. His previous owners left a six year-old child to care for him without supervision, and the child fed him corn on the cob, misled by the name. Billy-Bob was badly poisoned, as snakes can only eat meat. We are still waiting to find out from the vets if Billy-Bob will survive."
+  "bio" => "We named Billy-Bob here Billy-Bob because he was literally corn-fed. His previous owners left a six year-old child to care for him without supervision, and the child fed him corn on the cob, misled by the name. Billy-Bob was badly poisoned."
   })
 
 #owners
