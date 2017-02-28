@@ -1,6 +1,6 @@
 <h2>Update animal details</h2>
 
-<p>Besides health changes, our animals often turn out to be a different sex, species, sub-species or breed than we initially thought.</p>
+<p>Often our animals Besides health changes, our animals often turn out to be a different sex, species, sub-species or breed than we initially thought.</p>
 
 <p>This page is for updating our animal records. Edit the information in the menu, then click 'update'.</p>
 
@@ -16,6 +16,10 @@
 
   <label for="adoptable">Adoptability:</label>
     <input value="<%= @animal.adoptable %>" type="text" id="adoptable" name="adoptable"/>
+
+    <label for="bio">Biography:</label>
+      <input value="<%= @animal.bio %>" type="text" id="bio" name="bio"/>
+
 
   <input type="submit" value="Update animal details"/>
 

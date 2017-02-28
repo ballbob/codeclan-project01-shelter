@@ -8,6 +8,7 @@ CREATE TABLE animals (
   adoptable VARCHAR(255) not null,
   admission_date TIMESTAMP, 
   type VARCHAR(255) not null
+  bio VARCHAR(255)
 );
 
 CREATE TABLE owners (

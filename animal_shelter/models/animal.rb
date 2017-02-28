@@ -2,7 +2,7 @@ require_relative('../db/sql_runner.rb')
 
 class Animal
 
-  attr_accessor :name, :adoptable, :id
+  attr_accessor :name, :adoptable, :id, :bio
 
   attr_reader :admission_date, :type
 
@@ -11,6 +11,7 @@ class Animal
     @adoptable = options['adoptable']
     @admission_date = options['admission_date']
     @type = options['type']
+    @bio = options['bio']
     @id = options['id'].to_i if options['id']
   end
 
@@ -49,10 +50,11 @@ class Animal
     return resultobject
   end
 
-  def display
-    sql = "SELECT * FROM animals WHERE id=#{@id}"
+  def self.display(id)
+    sql = "SELECT * FROM animals WHERE id=#{id}"
     result = SqlRunner.run(sql)
     resultobject = result.map { |animal| Animal.new(animal)}
+    return resultobject.first
   end
 
   def self.all
@@ -63,12 +65,10 @@ class Animal
 
   def update
     sql = "UPDATE animals SET
-    
     name = '#{@name}',
     adoptable = '#{@adoptable}',
     admission_date = '#{@admission_date}',
     type = '#{@type}'
-    
     WHERE id = '#{@id}';",
     SqlRunner.run(sql)
   end
