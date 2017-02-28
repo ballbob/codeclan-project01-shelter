@@ -32,4 +32,9 @@ class Owner
     resultobject = result.map { |owner| Owner.new(owner)}
   end
 
+  def delete
+    sql = "DELETE FROM owners WHERE id = #{@id}"
+    SqlRunner.run(sql)
+  end
+
 end

@@ -31,7 +31,7 @@ get '/shelter/animals/delete' do
   erb(:"animal/destroy")
 end
 
-post '/shelter/animals' do
+post '/shelter/animals/delete' do
   animal = Animal.new(params)
   animal.delete
   redirect to ("/shelter/animals")
@@ -53,6 +53,18 @@ post '/shelter/owners' do
   @owner.save
   redirect to ("/shelter/owners")
 end
+
+get '/shelter/owners/delete' do
+  @owners = Owner.all
+  erb(:"owner/destroy")
+end
+
+post '/shelter/owners/delete' do
+  @owner = Owner.new(params)
+  @owner.delete
+  redirect to ("/shelter/owners")
+end
+
 
 # adoptions
 get '/shelter/ownerships' do

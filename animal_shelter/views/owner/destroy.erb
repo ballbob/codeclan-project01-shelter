@@ -1,0 +1,35 @@
+<h2>Have an owner removed?</h2>
+
+<p>We keep tabs on our animals for a reason. They have often not had the best start in life, and it is necessary that we give them as happy a life as they can have.</p>
+
+<p>If ever one of our owners is found to have subjected an animal to further debasement, cruelty or neglect, we are fully licensed to have them eliminated. (Within reason.)</p>
+
+<p>While the service is fully legal, we recommend using a VPN service before making a selection on this page.</p>
+
+<form method="post" action="/shelter/owners/delete">
+ 
+   <select name="id">
+
+     <label>
+
+       <% for owner in @owners %>
+
+          <option value="<%=owner.id %>">
+
+              <%=owner.name %> with experience <%= owner.experience %>
+
+          </option>
+
+        <% end %>
+
+     </label>
+
+   </select>
+
+  <p>
+
+    <input type="submit" value="End owner"/>
+
+  </p>
+
+</form>
