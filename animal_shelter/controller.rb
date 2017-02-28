@@ -103,7 +103,16 @@ post '/shelter/owners/delete' do
   redirect to ("/shelter/owners")
 end
 
+get '/shelter/owners/:id/update' do
+  @owner = Owner.display(params[:id])
+  erb(:"owner/update")
+end
 
+post '/shelter/owners/:id/update' do
+  @owner = Owner.new(params)
+  @owner.save
+  redirect to ('/shelter/owners')
+end
 
 
 

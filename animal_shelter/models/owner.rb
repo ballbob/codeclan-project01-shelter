@@ -45,4 +45,11 @@ class Owner
     SqlRunner.run(sql)
   end
 
+  def self.display(id)
+    sql = "SELECT * FROM owners WHERE id= #{id}"
+    result = SqlRunner.run(sql)
+    resultobject = result.map { |owner| Owner.new(owner)}
+    return resultobject.first
+  end
+
 end
