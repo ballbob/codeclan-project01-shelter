@@ -8,8 +8,15 @@ html {
 body {
   font-family: Trebuchet MS;
   color: black;
-  margin: 0px;
   padding: 25px;
+}
+
+h1, h2, h3 {
+  position: center;
+}
+
+p {
+  position: left;
 }
 
 table, tr, th, td {

@@ -1,0 +1,31 @@
+<h2>Un-register an animal</h2>
+
+<p>This page is here to un-register an animal upon their death.</p>
+
+<form method="post" action="/shelter/animals/delete">
+
+<select name="animal_id">
+
+  <label>
+
+    <% for animal in @animals %>
+
+      <option value="<%=animal.id %>">
+
+        <%= animal.name %> the <%= animal.type %>
+
+      </option>
+
+    <% end %>
+
+    </select>
+
+  </label>
+
+  <p>
+
+    <input type="submit" value="Un-register"/>
+
+  </p>
+
+</form>

@@ -4,10 +4,12 @@ require_relative('./models/animal.rb')
 require_relative('./models/owner.rb')
 require_relative('./models/ownership.rb')
 
+# index
 get '/shelter' do
   erb(:index)
 end
 
+# animals
 get '/shelter/animals' do
   @animals = Animal.all
   erb(:"animal/index")
@@ -24,6 +26,18 @@ post '/shelter/animals' do
   redirect to ("/shelter/animals")
 end
 
+get '/shelter/animals/delete' do
+  @animals = Animal.all
+  erb(:"animal/destroy")
+end
+
+post '/shelter/animals' do
+  animal = Animal.new(params)
+  animal.delete
+  redirect to ("/shelter/animals")
+end
+
+# owners
 get '/shelter/owners' do
   @owners = Owner.all
   erb(:"owner/index")
@@ -40,6 +54,7 @@ post '/shelter/owners' do
   redirect to ("/shelter/owners")
 end
 
+# adoptions
 get '/shelter/ownerships' do
   @ownerships = Ownership.all
   @animals = Animal.all
@@ -59,3 +74,4 @@ post '/shelter/ownerships' do
   @ownership.save
   redirect to ("/shelter/ownerships")
 end
+
