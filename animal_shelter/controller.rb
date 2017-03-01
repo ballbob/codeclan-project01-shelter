@@ -91,9 +91,9 @@ get '/shelter/owners/:id/update/?' do
   erb(:"owner/update")
 end
 
-post '/shelter/owners/:id/update/?' do
+post '/shelter/owners/:id/update' do
   @owner = Owner.new(params)
-  @owner.save
+  @owner.update
   redirect to ('/shelter/owners')
 end
 
