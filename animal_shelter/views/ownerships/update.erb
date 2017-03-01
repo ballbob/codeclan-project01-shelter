@@ -6,9 +6,13 @@
 
 <form method="post" action="/shelter/ownerships/<%=@ownership.id%>/update">
 
-<p>
+  <p>
 
- <label for="animal_id">
+    <label for="animal_id">Animal:</label>
+
+  </p>
+
+  <p>
 
    <select name="animal_id">
 
@@ -24,14 +28,16 @@
 
    </select>
 
- </label>
+  </p>
 
-</p>
+  <p>
 
-<p>
-
-  <label for="owner_id">
-
+  <label for="owner_id">Owner:</label>
+  
+  </p>
+  
+  <p>
+  
     <select name="owner_id">
 
       <% for owner in @owners %> 

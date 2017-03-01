@@ -45,8 +45,6 @@ get '/shelter/ownerships/:id/update' do
 end
 
 post '/shelter/ownerships/:id/update' do
-  @animals = Animal.all
-  @owners = Owner.all
   @ownership = Ownership.new(params)
   @ownership.update
   redirect to ('/shelter/ownerships')
