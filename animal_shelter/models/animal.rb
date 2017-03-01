@@ -2,9 +2,7 @@ require_relative('../db/sql_runner.rb')
 
 class Animal
 
-  attr_accessor :name, :adoptable, :id, :bio, :type
-
-  attr_reader :admission_date
+  attr_accessor :name, :adoptable, :id, :bio, :type, :admission_date
 
   def initialize(options)
     @name = options['name']
@@ -71,7 +69,7 @@ class Animal
     admission_date = '#{@admission_date}',
     type = '#{@type}',
     bio = '#{@bio}'
-    WHERE id = '#{@id}';",
+    WHERE id = #{@id};"
     SqlRunner.run(sql)
   end
 

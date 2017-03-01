@@ -1,3 +1,4 @@
+require('pry')
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('./models/animal.rb')
@@ -43,9 +44,12 @@ get '/shelter/animals/:id/update' do
   erb(:"animal/update")
 end
 
-post '/shelter/animals/:id/update' do 
+post '/shelter/animals/:id/update/?' do
   @animal = Animal.new(params)
-  @animal.save
+  admission = Animal.display(params[:id]).admission_date.to_s
+  @animal.admission_date = admission 
+  #binding.pry
+  @animal.update
   redirect to ('/shelter/animals')
 end
 
