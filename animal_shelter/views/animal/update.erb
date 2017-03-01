@@ -1,6 +1,6 @@
 <h2>Update animal details</h2>
 
-<p>Often our animals Besides health changes, our animals often turn out to be a different sex, species, sub-species or breed than we initially thought.</p>
+<p>Besides health changes, our animals often turn out to be a different sex, species, sub-species or breed than we initially thought.</p>
 
 <p>This page is for updating our animal records. Edit the information in the menu, then click 'update'.</p>
 
@@ -8,18 +8,34 @@
 
 <form method="post" action="/shelter/animals/<%=@animal.id %>/update">
 
-  <label for="name">Name:</label>
+<p>
+  <label for="name">Name: </label>
+</p>
+<p>
     <input value="<%= @animal.name %>" type="text" id="name" name="name"/>
+</p>
 
-  <label for="type">Type:</label>
-    <input value="<%= @animal.type %>" type="text" id="type" name="type"/>
+<p>
+  <label for="type">Type: </label>
+</p>
+<p>
+  <input value="<%= @animal.type %>" type="text" id="type" name="type"/>
+</p>
 
-  <label for="adoptable">Adoptability:</label>
+<p>
+  <label for="adoptable">Adoptability: </label>
+</p>
+<p>
     <input value="<%= @animal.adoptable %>" type="text" id="adoptable" name="adoptable"/>
+</p>
 
-    <label for="bio">Biography:</label>
-      <input value="<%= @animal.bio %>" type="text" id="bio" name="bio"/>
-
+<p>
+    <label for="bio">Biography: </label>
+</p>
+<p>   
+   <input value="<%= @animal.bio %>" type="text" id="bio" name="bio"/>
+</p>
+<p>
   <input type="submit" value="Update animal details"/>
-
+</p>
 </form>

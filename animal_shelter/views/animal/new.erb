@@ -2,63 +2,91 @@
 
 <p>This page is for staff to register an animal with the charity. Be as specific and descriptive as possible, as we will use your entry as a reference.</p>
 
+
 <form action = "/shelter/animals" method = "post">
 
-  <p>
-  
-    <label for="name">
- 
-      Enter animal name. 
- 
-    </label>
+  <table>
 
-    <input id="name" name="name" type="text"/>
-  
-  </p>
+    <tr>
 
-  <p>
-  
-    <label for="type">
- 
-      Type of animal. Begin 'Exotic -' if the animal is a bird, reptile or invertebrate, or non-native to the UK, with the exception of common companion animals. 
- 
-    </label>
-    
-    <input id="type" name="type" type="text"/>
-  
-  </p>
+      <p>
+      
+        <label for="name">
+     
+          Enter animal name. 
+     
+        </label>
 
-  <p>
-  
-    <label for="admission_date">
- 
-      Date and time admitted: 
- 
-    </label>
+        <input id="name" name="name" type="text"/>
+      
+      </p>
 
-    <input id="admission_date" name="admission_date" type="text"/>
-  
-  </p>
+    </tr>
 
-  <p>
-  
-    <label for="adoptable">
- 
-      Is the animal ready for adoption? Either way, describe the animal's health and temperament. 
- 
-    </label>
+    <tr>
 
-    <input id="adoptable" name="adoptable" type="text"/>
-  
-  </p>
+      <p>
+      
+        <label for="type">
+     
+          Type of animal. Begin 'Exotic -' if the animal is a bird, reptile or invertebrate, or non-native to the UK, with the exception of common companion animals. 
+     
+        </label>
+        
+        <input id="type" name="type" type="text"/>
+      
+      </p>
 
-    <label for="bio">
+    </tr>
 
-    Tell us the animal's history.
+    <tr>
 
-    </label>
+      <p>
+      
+        <label for="admission_date">
+     
+          Date and time admitted: 
+     
+        </label>
 
-    <input id="bio" name="bio" type="text"/>
+        <input id="admission_date" name="admission_date" type="text"/>
+      
+      </p>
+
+    </tr>
+
+    <tr>
+
+      <p>
+      
+        <label for="adoptable">
+     
+          Is the animal ready for adoption? Either way, describe the animal's health and temperament. 
+     
+        </label>
+
+        <input id="adoptable" name="adoptable" type="text"/>
+      
+      </p>
+
+    </tr>
+
+    <tr>
+
+    <p>
+        <label for="bio">
+
+        Tell us the animal's history.
+
+        </label>
+
+        <input id="bio" name="bio" type="text"/>
+
+    </p>
+
+    </tr>
+
+  </table>
 
   <input type="submit" value="Register animal"/>
 

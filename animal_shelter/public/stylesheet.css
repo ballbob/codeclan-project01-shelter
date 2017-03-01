@@ -24,6 +24,7 @@ h1, h2, h3 {
 
 p {
   position: right;
+  margin: 1%;
 }
 
 table, tr, th, td {
@@ -32,6 +33,11 @@ table, tr, th, td {
 
 form, input {
   border: 1px solid black;
+}
+
+input {
+  width: 500px;
+  height: 30px;
 }
 
 nav {
