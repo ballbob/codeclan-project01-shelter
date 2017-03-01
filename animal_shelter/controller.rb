@@ -80,7 +80,7 @@ get '/shelter/owners/delete/?' do
   erb(:"owner/destroy")
 end
 
-post '/shelter/owners/delete/?' do
+post '/shelter/owners/delete' do
   @owner = Owner.new(params)
   @owner.delete
   redirect to ("/shelter/owners")

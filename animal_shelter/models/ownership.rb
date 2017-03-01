@@ -55,12 +55,12 @@ class Ownership
     return Owner.new(result.first)
   end 
 
-  def update
-    SQL = "UPDATE owners SET
-    owner_id = '#{@owner_id}',
-    animal_id = '#{@animal_id}
-    WHERE id = #{@id}"
-    SqlRunner.run(sql)
-  end
+  # def update
+  #   SQL = "UPDATE owners SET
+  #   owner_id = '#{@owner_id}',
+  #   animal_id = '#{@animal_id}
+  #   WHERE id = #{@id}"
+  #   SqlRunner.run(sql)
+  # end
 
 end
