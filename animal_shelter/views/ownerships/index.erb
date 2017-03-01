@@ -24,11 +24,11 @@
       <td>
         <a href="/shelter/ownerships/<%= ownership.id %>/update">
           <%= ownership.owner.name %>
-        </a>
+        </a> with <%= ownership.owner.experience %>
       </td>
         
       <td>
-        <%= ownership.animal.name %>
+        <%= ownership.animal.name %> the <%= ownership.animal.type %>
       </td>
     
     </tr>

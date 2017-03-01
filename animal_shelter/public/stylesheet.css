@@ -32,6 +32,7 @@ table {
   table-layout: auto;
   width: 75%;
   border: 1px solid black;
+  text-align: center;
 }
 
 tr, th, td {
