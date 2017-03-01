@@ -11,7 +11,8 @@ class Ownership
   end
 
   def save
-    sql = "INSERT INTO ownerships (animal_id,owner_id)
+    sql = "INSERT INTO ownerships 
+    ( animal_id, owner_id )
     VALUES (
     '#{@animal_id}',
     '#{@owner_id}') RETURNING *"
@@ -55,17 +56,19 @@ class Ownership
     return Owner.new(result.first)
   end 
 
-  def display
-    sql = "SELECT * FROM ownerships WHERE id = #{@id}"
-    SqlRunner.run(sql)
+  def self.display(id)
+    sql = "SELECT * FROM ownerships WHERE id = #{id}"
+    result = SqlRunner.run(sql)
+    resultobject = result.map { |ownership| Ownership.new(ownership)}
+    return resultobject.first
   end
 
- # def update
- #   SQL = "UPDATE owners SET
- #   owner_id = '#{@owner_id}',
- #   animal_id = '#{@animal_id}'
- #   WHERE id = #{@id}"
- #   SqlRunner.run(sql)
- # end
+def update
+  sql = "UPDATE ownerships SET 
+    owner_id = '#{@owner_id}',
+    animal_id = '#{@animal_id}'
+    WHERE id = #{@id};"
+    SqlRunner.run(sql)
+end
 
 end

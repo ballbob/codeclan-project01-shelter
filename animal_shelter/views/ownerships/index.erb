@@ -6,6 +6,8 @@
 
 <p>To return the animal to our care, click <a href="/shelter/ownerships/delete">here</a>.</p>
 
+<p>To update an ownership, click on the owner name.</p>
+
 <table class="table">
   <tr>
   
@@ -20,7 +22,9 @@
     <tr>
 
       <td>
-        <%= ownership.owner.name %>
+        <a href="/shelter/ownerships/<%= ownership.id %>/update">
+          <%= ownership.owner.name %>
+        </a>
       </td>
         
       <td>

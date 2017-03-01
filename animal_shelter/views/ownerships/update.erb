@@ -6,9 +6,10 @@
 
 <form method="post" action="/shelter/ownerships/<%=@ownership.id%>/update">
 
+<select name="animal_id">
   <p>
 
-    <label for="animal_id">
+    <label>
 
     Animal: 
 
@@ -16,15 +17,26 @@
 
   </p>
 
+<p>
+
+<% for animal in @animals %>
+
+    <option value="<%= @ownership.animal_id %>">
+
+    <%= animal.name %> the <%= animal.type %>
+
+    </option>
+
+<% end %>
+
+</p>
+
+</select>
+
+<select name="owner_id">
   <p>
 
-    <input type="select" value="<%= @ownership.animal.name %> the <%= @ownership.animal.type %>"/>
-
-  </p>
-
-  <p>
-
-    <label for="owner_id">
+    <label  >
 
     Owner:
 
@@ -34,9 +46,20 @@
 
   <p>
 
-    <input type="select" value = "<%= @ownership.owner.name %>"/>
+<% for owner in @owners %> 
+  
+  <option value="<%= @ownership.owner_id %>">
 
-  </p>
+    <%= owner.name %> with <%= owner.experience %>
+
+  </option>
+
+<% end %>
+
+</p>
+
+</select>
 
   <input type="submit" value="Update adoption"/>
+
 </form>

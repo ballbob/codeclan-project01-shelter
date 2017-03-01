@@ -20,7 +20,7 @@ get '/shelter/ownerships/new/?' do
   erb(:"ownerships/new")
 end
 
-post '/shelter/ownerships/new/?' do
+post '/shelter/ownerships/new' do
   @ownership = Ownership.new(params)
   @ownership.save
   redirect to ("/shelter/ownerships")
@@ -31,13 +31,15 @@ get '/shelter/ownerships/delete/?' do
   erb(:"ownerships/destroy")
 end
 
-post '/shelter/ownerships/delete/?' do
+post '/shelter/ownerships/delete' do
   @ownership = Ownership.new(params)
   @ownership.delete()
   redirect to ("/shelter/ownerships")
 end
 
 get '/shelter/ownerships/:id/update' do
+  @animals = Animal.all
+  @owners = Owner.all
   @ownership = Ownership.display(params[:id])
   erb(:"ownerships/update")
 end
