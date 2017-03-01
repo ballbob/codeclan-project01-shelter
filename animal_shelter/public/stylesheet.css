@@ -1,8 +1,16 @@
 html {
+  height: 100%;
   background: white url('/ballpython.jpg');
   background-position:100% 100%;
   background-repeat: no-repeat;
   background-size: 20%;
+}
+
+body {
+  height: 100%;
+  font-family: Trebuchet MS;
+  color: black;
+  padding: 25px;
 }
 
 select {
@@ -10,18 +18,12 @@ select {
   height: 30px;
 }
 
-body {
-  font-family: Trebuchet MS;
-  color: black;
-  padding: 25px;
-}
-
 h1, h2, h3 {
   position: center;
 }
 
 p {
-  position: left;
+  position: right;
 }
 
 table, tr, th, td {
@@ -32,8 +34,9 @@ form, input {
   border: 1px solid black;
 }
 
-.flex {
+nav {
+  border: 1px solid black;
   display: flexbox;
-  justify-content: center;
+  flex: space-between;
   border: 1px solid black;
 }
