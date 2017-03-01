@@ -24,7 +24,7 @@ get '/shelter/animals/delete/?' do
   erb(:"animal/destroy")
 end
 
-post '/shelter/animals/delete/?' do
+post '/shelter/animals/delete' do
   animal = Animal.new(params)
   animal.delete
   redirect to ('/shelter/animals')
@@ -35,7 +35,7 @@ get '/shelter/animals/:id/update/?' do
   erb(:"animal/update")
 end
 
-post '/shelter/animals/:id/update/?' do
+post '/shelter/animals/:id/update' do
   @animal = Animal.new(params)
   admission = Animal.display(params[:id]).admission_date.to_s
   @animal.admission_date = admission 

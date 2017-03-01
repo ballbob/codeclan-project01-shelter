@@ -29,7 +29,7 @@ p {
 }
 
 table {
-  table-layout: auto;
+  table-layout: fixed;
   width: 75%;
   border: 1px solid black;
   text-align: center;
@@ -38,6 +38,7 @@ table {
 tr, th, td {
  border: 1px solid black;
  padding: 2% 0% 2% 1%;
+ outline-color: white;
 }
 
 form, input {

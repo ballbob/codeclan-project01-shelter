@@ -68,7 +68,7 @@ def update
     owner_id = '#{@owner_id}',
     animal_id = '#{@animal_id}'
     WHERE id = #{@id};"
-    SqlRunner.run(sql)
+  SqlRunner.run(sql)
 end
 
 end
