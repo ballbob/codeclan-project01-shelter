@@ -42,8 +42,8 @@ input {
   height: 30px;
 }
 
-nav {
+.linkinnav {
   border: 1px solid black;
   display: flexbox;
-  align-content: right;
+  justify-content: space-around;
 }
