@@ -6,9 +6,37 @@
 
 <form method="post" action="/shelter/ownerships/<%=@ownership.id%>/update">
 
+  <p>
 
+    <label for="animal_id">
 
-<label for="animal_id">Animal: </label>
+    Animal: 
 
+    </label>
 
+  </p>
+
+  <p>
+
+    <input type="select" value="<%= @ownership.animal.name %> the <%= @ownership.animal.type %>"/>
+
+  </p>
+
+  <p>
+
+    <label for="owner_id">
+
+    Owner:
+
+    </label>
+
+  </p>
+
+  <p>
+
+    <input type="select" value = "<%= @ownership.owner.name %>"/>
+
+  </p>
+
+  <input type="submit" value="Update adoption"/>
 </form>

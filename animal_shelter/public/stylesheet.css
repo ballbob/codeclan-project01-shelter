@@ -1,6 +1,7 @@
 html {
   height: 100%;
   background: white url('/ballpython.jpg');
+  background-attachment: fixed;
   background-position:100% 100%;
   background-repeat: no-repeat;
   background-size: 20%;
@@ -24,11 +25,12 @@ h1, h2, h3 {
 
 p {
   position: right;
-  margin: 1%;
+  right margin: 1%;
 }
 
 table, tr, th, td {
   border: 1px solid black;
+  margin: 1%;
 }
 
 form, input {
@@ -43,6 +45,5 @@ input {
 nav {
   border: 1px solid black;
   display: flexbox;
-  flex: space-between;
-  border: 1px solid black;
+  align-content: right;
 }
