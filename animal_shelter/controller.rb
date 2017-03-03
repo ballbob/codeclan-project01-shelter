@@ -9,6 +9,6 @@ require_relative('./controllers/owner_controller.rb')
 require_relative('./controllers/ownership_controller.rb')
 
 # index
-get '/shelter/?' do
+get '/' do
   erb(:index)
 end

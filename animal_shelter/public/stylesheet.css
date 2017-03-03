@@ -12,6 +12,7 @@ body {
   font-family: Trebuchet MS;
   color: black;
   padding: 25px;
+  width: 80%;
 }
 
 select {
@@ -51,8 +52,13 @@ input {
 }
 
 .linkinnav {
-  border: 1px solid black;
   padding: 1% 1% 1% 1%;
-  display: flexbox;
+}
+
+.header {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
+  flex-grow: 1 100%;
 }

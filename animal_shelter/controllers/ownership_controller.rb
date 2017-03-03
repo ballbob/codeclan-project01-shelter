@@ -6,45 +6,45 @@ require_relative('../models/owner.rb')
 require_relative('../models/ownership.rb')
 
 # adoptions
-get '/shelter/ownerships/?' do
+get '/ownerships/?' do
   @ownerships = Ownership.all
   @animals = Animal.all
   @owners = Owner.all
   erb(:"ownerships/index")
 end
 
-get '/shelter/ownerships/new/?' do
+get '/ownerships/new/?' do
   @ownerships = Ownership.all
   @animals = Animal.all
   @owners = Owner.all
   erb(:"ownerships/new")
 end
 
-post '/shelter/ownerships/new' do
+post '/ownerships/new' do
   @ownership = Ownership.new(params)
   @ownership.save
-  redirect to ("/shelter/ownerships")
+  redirect to ("/ownerships")
 end
 
-get '/shelter/ownerships/delete/?' do
+get '/ownerships/delete' do
   @ownerships = Ownership.all
   erb(:"ownerships/destroy")
 end
 
-post '/shelter/ownerships/delete' do
+post '/ownerships/delete' do
   @ownership = Ownership.new(params)
   @ownership.delete()
-  redirect to ("/shelter/ownerships")
+  redirect to ("/ownerships")
 end
 
-get '/shelter/ownerships/:id/update' do
+get '/ownerships/:id/edit' do
+  @ownership = Ownership.display(params[:id])
   @animals = Animal.all
   @owners = Owner.all
-  @ownership = Ownership.display(params[:id])
-  erb(:"ownerships/update")
+  erb(:"ownerships/edit")
 end
 
-post '/shelter/ownerships/:id/update' do
+post '/ownerships/:id' do
   @ownership = Ownership.new(params)
   @ownership.update
   redirect to ('/shelter/ownerships')

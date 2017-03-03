@@ -2,7 +2,7 @@
 
 <p>This page is used to update the details of owners, for instance previously unknown experience or a change of name.</p>
 
-<form method="post" action="/shelter/owners/<%=@owner.id%>/update">
+<form method="post" action="/owners/<%=@owner.id%>/update">
 
   <label for="name">Name:</label>
     <input value="<%= @owner.name %>" type="text" id="name" name="name"/>

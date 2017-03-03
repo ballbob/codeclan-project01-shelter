@@ -4,41 +4,41 @@ require('sinatra/contrib/all')
 require_relative('../models/owner.rb')
 
 # owners
-get '/shelter/owners/?' do
+get '/owners/?' do
   @owners = Owner.all
   erb(:"owner/index")
 end
 
-get '/shelter/owners/new/?' do
+get '/owners/new' do
   @owners = Owner.all
   erb(:"owner/new")
 end
 
-post '/shelter/owners/?' do
+post '/owners' do
   @owner = Owner.new(params)
   @owner.save
-  redirect to ("/shelter/owners")
+  redirect to ("/owners")
 end
 
-get '/shelter/owners/delete/?' do
+get '/owners/delete' do
   @owners = Owner.all
   erb(:"owner/destroy")
 end
 
-post '/shelter/owners/delete' do
+post '/owners/delete' do
   @owner = Owner.new(params)
   @owner.delete
-  redirect to ("/shelter/owners")
+  redirect to ("/owners")
 end
 
-get '/shelter/owners/:id/update/?' do
+get '/owners/:id/edit' do
   @owner = Owner.display(params[:id])
-  erb(:"owner/update")
+  erb(:"owner/edit")
 end
 
-post '/shelter/owners/:id/update' do
+post '/owners/:id/edit' do
   @owner = Owner.new(params)
   @owner.update
-  redirect to ('/shelter/owners')
+  redirect to ('/owners')
 end
 

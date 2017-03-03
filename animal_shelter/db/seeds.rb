@@ -44,7 +44,7 @@ Ownership.delete_all
 
 @billybobsnake = Animal.new({
   "name" => "Billybob",
-  "adoptable" => "No - rehab after unsuitable diet",
+  "adoptable" => "No - rehab after corn poisoning",
   "admission_date" => "05/05/2016",
   "type" => "exotic - Corn snake",
   "bio" => "We named Billy-Bob here Billy-Bob because he was literally corn-fed. His previous owners left a six year-old child to care for him without supervision, and the child fed him corn on the cob, misled by the name. Billy-Bob was badly poisoned."

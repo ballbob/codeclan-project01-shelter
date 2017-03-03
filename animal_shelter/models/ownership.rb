@@ -65,8 +65,8 @@ class Ownership
 
 def update
   sql = "UPDATE ownerships SET 
-    owner_id = '#{@owner_id}',
-    animal_id = '#{@animal_id}'
+    owner_id = #{@owner_id},
+    animal_id = #{@animal_id}
     WHERE id = #{@id};"
   SqlRunner.run(sql)
 end
